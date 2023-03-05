@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     res.send(
         `<div style= "text-align: center;">
         <h1>Tugas Express JS Eduwork</h1>
-        <form action="/product" enctype="multipart/form-data" method="post">
+        <form action="http://localhost:3001/product" method="post">
         <label for="fname">Name:</label><br>
         <input type="text" name="name" placeholder="Masukan nama produk"><br>
         <label for="lname">Price:</label><br>
@@ -39,7 +39,6 @@ router.post('/product', upload.single('image'), (req, res) => {
         //     image
         // });
     }
-
 });
 
 module.exports = router;
