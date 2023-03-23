@@ -3,7 +3,8 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads' });
 const productController = require('./controler');
 
-// router.get('/product', productController.index);
+
+router.get('/product', productController.index);
 
 router.get('/product/:id', productController.view);
 
